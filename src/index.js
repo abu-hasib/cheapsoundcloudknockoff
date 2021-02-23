@@ -1,13 +1,14 @@
-log();
-console.log("Hello Project.");
-
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import log from "./new";
+import Stream from "./components/Stream";
 
-const title = "React with Webpack and Babel";
+const tracks = [
+  {
+    title: "Some track",
+  },
+  {
+    title: "Some other track",
+  },
+];
 
-ReactDOM.render(<App title={title}/>, document.getElementById("app"));
-
-module.hot.accept();
+ReactDOM.render(<Stream tracks={tracks} />, document.getElementById("app"));
